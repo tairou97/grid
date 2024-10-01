@@ -29,7 +29,7 @@ h1 {
   font-size: 45px;
   text-align: center;
   text-transform: uppercase;
-  color: #fff;
+
 }
 
 p {
@@ -122,14 +122,13 @@ p {
   display: grid;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
+
 }
 
 .overlay-inner .close {
-  color: #c4c4c4;
+  color: #656565;
   font-size: 30px;
-  position: absolute;
-  top: 10px;
+
 }
 
 .overlay.open {
@@ -142,7 +141,7 @@ p {
   background: white;
   width: 700px;
   padding: 10px;
-  border-radius: 20px;
+
 }
 
 .item__overlay {
