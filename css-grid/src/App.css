@@ -1,0 +1,163 @@
+:root {
+  --yellow: #ffc600;
+  --black: #272727;
+  --tertiary-color: #dcdcdc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 50px;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(220.55deg, #DD7BFF 0%, #FF6C6C 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+.close {
+  background: none;
+  color: #fff;
+  border: none;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  /* Automatische Spalten */
+  grid-auto-flow: dense;
+  grid-auto-rows: 100px;
+  gap: 0;
+  /* Kein Abstand zwischen den Bildern */
+}
+
+.item {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+}
+
+.item .album_artwork {
+  grid-column: 1 / -1;
+  grid-row: 1/ -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item.v2 {
+  grid-row: span 2;
+}
+
+.item.v3 {
+  grid-row: span 3;
+}
+
+.item.v4 {
+  grid-row: span 4;
+}
+
+.item.h2 {
+  grid-column: span 2;
+}
+
+.item.h3 {
+  grid-column: span 3;
+}
+
+.item.h4 {
+  grid-column: span 4;
+}
+
+.album_artwork {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Füllt das Bild aus ohne Verzerrung */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 2;
+}
+
+.overlay img {
+  width: 100%;
+
+}
+
+.overlay-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-inner .close {
+  color: #c4c4c4;
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+}
+
+.overlay.open {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-inner {
+  background: white;
+  width: 700px;
+  padding: 20px;
+}
+
+.item__overlay {
+  background: #ffc60032;
+  grid-column: 1 / -1;
+  grid-row: 1/ -1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transform: translateY(100%);
+  transition: 0.2s;
+}
+
+.item__overlay .btn {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.item:hover .item__overlay {
+  transform: translateY(0);
+}
