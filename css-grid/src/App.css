@@ -126,7 +126,6 @@ p {
 .overlay .overlay-inner {
   background: white;
   width: 700px;
-
   padding: 10px;
 
 }
@@ -159,6 +158,8 @@ p {
 }
 
 
+
+
 @media screen and (max-width: 768px) {
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -166,24 +167,9 @@ p {
 
   .overlay .overlay-inner {
     background: white;
+    width: 80%;
 
     padding: 10px;
 
   }
-
-}
-
-
-@media screen and (max-width: 480px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  }
-
-  .overlay .overlay-inner {
-    background: white;
-    width: 330px;
-    padding: 10px;
-
-  }
-
 }
