@@ -92,12 +92,7 @@ p {
   grid-column: span 4;
 }
 
-.album_artwork {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* Füllt das Bild aus ohne Verzerrung */
-}
+
 
 .overlay {
   position: fixed;
@@ -112,6 +107,7 @@ p {
 
 .overlay img {
   width: 100%;
+
 
 }
 
@@ -169,4 +165,16 @@ p {
 
 .item:hover .item__overlay {
   transform: translateY(0);
+}
+
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .overlay-inner {
+    width: 100%;
+  }
+
 }
