@@ -106,20 +106,9 @@ p {
 }
 
 .overlay img {
-  width: 100%;
-
-
+  width: 100%
 }
 
-.overlay-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-
-}
 
 .overlay-inner .close {
   color: #656565;
@@ -129,13 +118,15 @@ p {
 
 .overlay.open {
   display: grid;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
+
 }
 
-.overlay-inner {
+.overlay .overlay-inner {
   background: white;
   width: 700px;
+
   padding: 10px;
 
 }
@@ -154,13 +145,13 @@ p {
 
 .item__overlay .btn {
   background: none;
-  border: none;
+  border: 2px solid #fff;
   color: #fff;
   text-transform: uppercase;
   background: rgba(0, 0, 0, 0.7);
   padding: 10px 15px;
   cursor: pointer;
-  border-radius: 15px;
+
 }
 
 .item:hover .item__overlay {
@@ -173,8 +164,11 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 
-  .overlay-inner {
-    width: 100%;
+  .overlay .overlay-inner {
+    background: white;
+    width: 360px;
+    padding: 10px;
+
   }
 
 }
