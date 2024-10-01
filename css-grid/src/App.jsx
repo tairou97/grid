@@ -15,26 +15,6 @@ import img12 from "../src/assets/img12.png";
 import img13 from "../src/assets/img3.png";
 import img14 from "../src/assets/img4.png";
 import img15 from "../src/assets/img5.png";
-// import img16 from "../src/assets/img6.png";
-// import img17 from "../src/assets/img7.png";
-// import img18 from "../src/assets/img8.png";
-// import img19 from "../src/assets/img9.png";
-// import img20 from "../src/assets/img10.png";
-// import img21 from "../src/assets/img1.png";
-// import img22 from "../src/assets/img2.png";
-// import img23 from "../src/assets/img3.png";
-// import img24 from "../src/assets/img4.png";
-// import img25 from "../src/assets/img5.png";
-// import img26 from "../src/assets/img6.png";
-// import img27 from "../src/assets/img7.png";
-// import img28 from "../src/assets/img8.png";
-// import img29 from "../src/assets/img9.png";
-// import img30 from "../src/assets/img10.png";
-// import img31 from "../src/assets/img1.png";
-// import img32 from "../src/assets/img2.png";
-// import img33 from "../src/assets/img3.png";
-// import img34 from "../src/assets/img4.png";
-// import img35 from "../src/assets/img5.png";
 
 // Bilder-Array
 const images = [
@@ -53,26 +33,6 @@ const images = [
   img13,
   img14,
   img15,
-  // img16,
-  // img17,
-  // img18,
-  // img19,
-  // img20,
-  // img21,
-  // img22,
-  // img23,
-  // img24,
-  // img25,
-  // img26,
-  // img27,
-  // img28,
-  // img29,
-  // img30,
-  // img31,
-  // img32,
-  // img33,
-  // img34,
-  // img35,
 ];
 
 // Zufällige Zahlen für Layout (Beispiel: 50 Elemente mit Zahlenpaaren)
@@ -161,6 +121,7 @@ function App() {
       </div>
 
       {/* Galerie mit Bildern */}
+      <h1>Grid Gallery</h1>
       <section className="gallery">
         {digits.map((digit, index) => {
           const randomImage = images[digit[1] - 1]; // Wähle ein zufälliges Bild basierend auf den zufälligen Zahlen
